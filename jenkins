@@ -1,0 +1,14 @@
+#!/usr/bin/env groovy
+
+node{ 
+
+stage('cloning repo'){
+  checkout scm
+}
+
+stage('Build'){
+echo "Building conatiner image and runnig the Container "
+sh 'sudo docker build -t build1:3 .'
+sh 'sudo docker run -it -d --name custom2 -p 8300:80 build1:3' 
+}
+}
