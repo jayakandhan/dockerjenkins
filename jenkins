@@ -9,7 +9,7 @@ stage('cloning repo'){
 stage('Build'){
 echo "Building conatiner image and runnig the Container "
 sh 'sudo su -'  
-sh 'sudo docker build -t build1:4 .'
-sh 'sudo docker run -it -d --name custom3 -p 8400:80 build1:4' 
+sh 'sudo docker build -t build1:5 .'
+sh 'sudo docker run -it -d --name custom5 -p 8400:80 build1:5' 
 }
 }
